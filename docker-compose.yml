@@ -1,8 +1,8 @@
 version: "3"
 services: 
   nginapp:
-    image: nginx:1.13.7
-    volumes: 
-      - ./app:/usr/share/nginx/html
+    build: 
+      context: .
+      dockerfile: Dockerfile-nginx
     ports: 
       - 80:80
