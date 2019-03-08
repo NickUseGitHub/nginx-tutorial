@@ -2,6 +2,10 @@ FROM nginx:1.13.7
 
 #copy config file
 COPY ./.conf/nginx.conf /etc/nginx/nginx.conf
+
+#copy certs
+COPY ./certs /etc/nginx/certs
+
 #Copy app
 COPY ./app /usr/share/nginx/html
 #Copy app
